@@ -115,6 +115,7 @@
     "InGameHudMixin",
     "InGameOverlayRendererMixin",
     "ItemEntityRendererMixin",
+    "ItemFrameEntityRendererMixin",
     "ItemGroupsAccessor",
     "ItemGroupsMixin",
     "ItemMixin",

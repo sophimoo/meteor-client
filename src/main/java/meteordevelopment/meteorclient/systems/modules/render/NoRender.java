@@ -379,6 +379,13 @@ public class NoRender extends Module {
         .build()
     );
 
+    private final Setting<Boolean> noItemFrames = sgEntity.add(new BoolSetting.Builder()
+        .name("item-frames")
+        .description("Disables rendering of item frame backgrounds while keeping their contents visible.")
+        .defaultValue(false)
+        .build()
+    );
+
     public NoRender() {
         super(Categories.Render, "no-render", "Disables certain animations or overlays from rendering.");
     }
@@ -604,6 +611,10 @@ public class NoRender extends Module {
 
     public boolean noNametags() {
         return isActive() && noNametags.get();
+    }
+
+    public boolean noItemFrames() {
+        return isActive() && noItemFrames.get();
     }
 
     public enum BannerRenderMode {
